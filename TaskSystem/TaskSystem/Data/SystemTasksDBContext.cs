@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using TaskSystem.Data.Map;
 using TaskSystem.Models;
 
 namespace TaskSystem.Data
@@ -12,6 +13,8 @@ namespace TaskSystem.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.ApplyConfiguration(new UserMap());
+            modelBuilder.ApplyConfiguration(new TaskMap());
             base.OnModelCreating(modelBuilder);
         }
     }

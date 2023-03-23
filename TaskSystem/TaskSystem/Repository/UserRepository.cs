@@ -33,6 +33,7 @@ namespace TaskSystem.Repository
 
         public async Task<UserModel> Update(UserModel user, int id)
         {
+            user.Id = id;
             UserModel userById = await GetById(id);
             if (userById == null)
             {

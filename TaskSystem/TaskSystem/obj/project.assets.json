@@ -3918,11 +3918,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Projects\\TaskSystem\\TaskSystem\\TaskSystem.csproj",
+      "projectUniqueName": "C:\\Projects\\API-NET7\\TaskSystem\\TaskSystem\\TaskSystem.csproj",
       "projectName": "TaskSystem",
-      "projectPath": "C:\\Projects\\TaskSystem\\TaskSystem\\TaskSystem.csproj",
+      "projectPath": "C:\\Projects\\API-NET7\\TaskSystem\\TaskSystem\\TaskSystem.csproj",
       "packagesPath": "C:\\Users\\rdavi\\.nuget\\packages\\",
-      "outputPath": "C:\\Projects\\TaskSystem\\TaskSystem\\obj\\",
+      "outputPath": "C:\\Projects\\API-NET7\\TaskSystem\\TaskSystem\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
