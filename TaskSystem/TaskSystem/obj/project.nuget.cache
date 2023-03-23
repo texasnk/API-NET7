@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wG8TY9YvsgVJu2IIBnTCryXi6wTtn5oemzGXwIzPuI+c21Qlemtx0UD6gJyC6YsIZv/R5mDklyt5ESvYeM5gzw==",
+  "dgSpecHash": "m+DYQzQUyNrpapvxPD70+ZaYrgxw0UY6reMoRTig/9NbMGx6h2RnVDvFpP+VQLiqbKPQJnsMerIFSRLS2utVbg==",
   "success": true,
-  "projectFilePath": "C:\\Projects\\TaskSystem\\TaskSystem\\TaskSystem.csproj",
+  "projectFilePath": "C:\\Projects\\API-NET7\\TaskSystem\\TaskSystem\\TaskSystem.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rdavi\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\rdavi\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
