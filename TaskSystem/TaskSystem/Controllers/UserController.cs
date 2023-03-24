@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using TaskSystem.Models;
 using TaskSystem.Repository.Interfaces;
 
 namespace TaskSystem.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class UserController : ControllerBase
@@ -35,7 +37,7 @@ namespace TaskSystem.Controllers
         {
             UserModel user = await _userRepository.Create(userModel);
             return Ok(user);   
-        }  
+        }
 
         [HttpPut("{id}")]
         public async Task<ActionResult<UserModel>> Update([FromBody]UserModel userModel, int id)

@@ -1,5 +1,8 @@
 
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 using TaskSystem.Data;
 using TaskSystem.Repository;
 using TaskSystem.Repository.Interfaces;
@@ -19,6 +22,29 @@ namespace TaskSystem
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
+            ///Authentication
+            var key = "texasTest1234$$$$$";
+            builder.Services.AddAuthentication(x =>
+            {
+                x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(x =>
+            {
+                x.RequireHttpsMetadata = false;
+                x.SaveToken = true;
+                x.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(key)),
+                    ValidateIssuer = false,
+                    ValidateAudience = false
+                };
+            });
+
+            builder.Services.AddSingleton<AuthenticationPolicy>(new AuthenticationPolicy(key));
+            ///
+
+            //Database
             builder.Services.AddEntityFrameworkSqlServer()
                 .AddDbContext<SystemTasksDBContext>(
                     options => options.UseSqlServer(builder.Configuration.GetConnectionString("DataBase"))
@@ -38,8 +64,8 @@ namespace TaskSystem
 
             app.UseHttpsRedirection();
 
+            app.UseAuthentication();
             app.UseAuthorization();
-
 
             app.MapControllers();
 

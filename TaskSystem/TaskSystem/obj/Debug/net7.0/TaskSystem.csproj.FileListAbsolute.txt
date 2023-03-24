@@ -107,3 +107,4 @@ C:\Projects\API-NET7\TaskSystem\TaskSystem\obj\Debug\net7.0\refint\TaskSystem.dl
 C:\Projects\API-NET7\TaskSystem\TaskSystem\obj\Debug\net7.0\TaskSystem.pdb
 C:\Projects\API-NET7\TaskSystem\TaskSystem\obj\Debug\net7.0\TaskSystem.genruntimeconfig.cache
 C:\Projects\API-NET7\TaskSystem\TaskSystem\obj\Debug\net7.0\ref\TaskSystem.dll
+C:\Projects\API-NET7\TaskSystem\TaskSystem\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
